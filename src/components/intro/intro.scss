@@ -1,0 +1,124 @@
+@import '../../global.scss';
+
+.intro {
+  background-color: black;
+  color: white;
+  display: flex;
+  background-image: url('../../../public/assets/bg1.png');
+  background-position: center;
+  background-size: cover;
+
+  .right {
+    display: flex;
+    flex: 1;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    .wrapper {
+      width: 100%;
+      height: 100%;
+      padding-left: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include mobile {
+        padding-left: 0;
+        align-items: center;
+      }
+
+      h1 {
+        font-size: 60px;
+        margin: 10px 0;
+
+        @include mobile {
+          font-size: 40px;
+        }
+      }
+      h2 {
+        font-size: 35px;
+      }
+      h3 {
+        font-size: 35px;
+
+        @include mobile {
+          font-size: 20px;
+        }
+
+        span {
+          font-size: inherit;
+          color: crimson;
+        }
+
+        .ityped-cursor {
+          animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+          50% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0;
+          }
+        }
+      }
+    }
+
+    .resume {
+      // position: relative;
+      // bottom: 10rem;
+      width: 15rem;
+      height: 5rem;
+      background-color: blueviolet;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      bottom: 20vh;
+      border-radius: 20px;
+      transition: all 0.4s ease;
+
+      // @include mobile{
+      //   width: 15rem;
+      //   height: 5rem;
+      // }
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        text-align: center;
+        text-decoration: none;
+        align-content: center;
+        color: white;
+        font-weight: 500;
+        font-size: 2rem;
+        gap: 5px;
+        flex-wrap: wrap;
+
+        .icon {
+          font-size: 3rem;
+        }
+      }
+
+      &:hover {
+        color: rgba(255, 255, 255, 1);
+        box-shadow: 0 5px 15px rgba(145, 92, 182, 0.4);
+        transform: translateY(-3px);
+      }
+    }
+  }
+
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+  }
+}
