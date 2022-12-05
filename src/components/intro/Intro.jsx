@@ -31,7 +31,7 @@ export default function Intro() {
           </h3>
         </div>
         <div className="resume">
-          <a href="assets/Souryadeep-Bhattacharya_Resume_.pdf">
+          <a href="assets/Souryadeep-Bhattacharya-Resume.pdf">
             RESUME <ArrowCircleDownIcon className={'icon'} />
           </a>
         </div>
