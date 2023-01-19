@@ -1,16 +1,17 @@
-@import "../../global.scss";
+@import '../../global.scss';
 
 .portfolio {
   background-color: white;
-  background-image: url("../../../public/assets/bg1.png");
+  background-image: url('../../../public/assets/bg1.png');
   display: flex;
   flex-direction: column;
+  height: max-content;
   align-items: center;
 
   h1 {
     font-size: 50px;
 
-    @include mobile{
+    @include mobile {
       font-size: 20px;
     }
   }
@@ -21,7 +22,7 @@
     list-style: none;
     display: flex;
 
-    @include mobile{
+    @include mobile {
       margin: 10px 0;
       flex-wrap: wrap;
       justify-content: center;
@@ -35,9 +36,10 @@
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 5rem;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
+    height: max-content;
 
-    @include mobile{
+    @include mobile {
       width: 100%;
     }
 
@@ -48,15 +50,16 @@
       border: 1px solid rgb(78, 75, 75);
       margin: 10px 20px;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       color: white;
       position: relative;
-      transition: all .5s ease;
-      cursor: pointer;
+      transition: all 0.5s ease;
+      // cursor: pointer;
       background-position: center;
 
-      @include mobile{
+      @include mobile {
         width: 13rem;
         height: 10rem;
       }
@@ -73,11 +76,38 @@
         z-index: 1;
       }
 
+      .item_link_cont {
+        position: absolute;
+        bottom: 2.6rem;
+        display: flex;
+        gap: 1rem;
+      }
+
+      .item_github_cont {
+        position: absolute;
+        bottom: 0.5rem;
+        display: flex;
+        gap: 1rem;
+      }
+
+      .item_github_cont *,
+      .item_link_cont * {
+        text-decoration: dotted;
+        color: rgb(15, 188, 231);
+        font-size: 1rem;
+      }
+
       &:hover {
         background-color: $mainColor;
         img {
           opacity: 0.2;
           z-index: 0;
+        }
+        .item_github_cont,
+        .item_link_cont a {
+          border: 2px solid white;
+          border-radius: 10px;
+          padding: 2px 10px;
         }
       }
     }
